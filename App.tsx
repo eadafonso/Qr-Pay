@@ -12,9 +12,21 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="NumberPay" component={NumberPayScreen} />
-        <Stack.Screen name="QrPay" component={QrScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="NumberPay"
+          component={NumberPayScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="QrPay"
+          component={QrScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
