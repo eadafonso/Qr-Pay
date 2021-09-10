@@ -3,8 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "./src/screens/Home";
-import NumberPayScreen from "./src/screens/NumberPay";
 import QrScreen from "./src/screens/QrPay";
+import NumberPayScreen from "./src/screens/NumberPay";
 
 export default function App() {
   const Stack = createStackNavigator();
