@@ -20,10 +20,9 @@ import {
 } from "./styles";
 
 import { Text } from "../../components/Text";
-
 import { Ionicons } from "@expo/vector-icons";
 
-const Home: React.FC = () => {
+const Home: React.FC = ({ navigation }: unknown | any) => {
   let [fontsLoaded] = useFonts({
     Inter_900Black,
     Inter_600SemiBold,
@@ -77,7 +76,10 @@ const Home: React.FC = () => {
         </Text>
 
         <MethodContainer>
-          <MethodPayment>
+          <MethodPayment
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate("NumberPay")}
+          >
             <Ionicons name="cash-outline" size={22} />
             <Text
               margin="0 0 0 10px"
@@ -90,7 +92,10 @@ const Home: React.FC = () => {
             </Text>
           </MethodPayment>
 
-          <MethodPayment>
+          <MethodPayment
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate("QrPay")}
+          >
             <Ionicons name="qr-code-outline" size={22} />
             <Text
               margin="0 0 0 10px"
